@@ -11,13 +11,14 @@ export class AccountService {
   private currentUserSource = new ReplaySubject<User>(1);
   public currentUser$ = this.currentUserSource.asObservable();
 
-  baseUrl = environment.apiURL + 'api/account/'
+  baseUrl = environment.apiURL 
   constructor(private http: HttpClient) { }
 
   public login(model: any): Observable<void> {
     return this.http.post<User>(this.baseUrl + 'login', model).pipe(
       take(1),
       map((response: User) => {
+        console.log(response)
         const user = response;
         if (user) {
           this.setCurrentUser(user)

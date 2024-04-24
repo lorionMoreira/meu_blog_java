@@ -5,22 +5,22 @@
     <form #loginForm="ngForm" class="form-signin" (ngSubmit)="login()">
       <i class="fa fa-users mb-2"></i>
       <h1 class="h3 mb-3 font-weight-normal">Entrar com</h1>
-      <label for="username" class="sr-only">Usuário</label>
+      <label for="email" class="sr-only">Usuário</label>
       <input
-        [(ngModel)]="model.userName"
-        name="username"
+        [(ngModel)]="model.email"
+        name="email"
         type="email"
-        id="username"
+        id="email"
         class="form-control"
         placeholder="Usuário"
         required
       >
-      <label for="password" class="sr-only">Password</label>
+      <label for="senha" class="sr-only">Password</label>
       <input
-        [(ngModel)]="model.password"
-        name="password"
-        type="password"
-        id="password"
+        [(ngModel)]="model.senha"
+        name="senha"
+        type="senha"
+        id="senha"
         class="form-control"
         placeholder="Senha"
         required
